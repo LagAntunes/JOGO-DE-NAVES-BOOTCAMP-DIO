@@ -1,7 +1,7 @@
 /* página incial do jogo*/
 
 html {
-    border-width: 10px;
+    border-width: 5px;
     border-style: groove;
     border-color: green greenyellow;
     height: 100%;
@@ -11,4 +11,36 @@ body {
     background-image: url("../imagens/fundo-tela-inicial.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family:"Capture\ it";
+    src: url("../fontes/Capture\ it.ttf");
+}
+
+h1 {
+    font-family:"Capture\ it";
+    width: fit-content;
+    font-size: 6em;
+    color: green;
+    text-shadow: 4px 4px rgb(152, 196, 87);
+    margin-left: 34%;
+    margin-top: 15%;
+}
+
+h2 {
+    font-family:"Capture\ it";
+    width: fit-content;
+    font-size: 2em;
+    color: rgb(89, 158, 89);
+    text-shadow: 1px 1px rgb(156, 209, 156);
+    margin-left: 15%;
+
 }
