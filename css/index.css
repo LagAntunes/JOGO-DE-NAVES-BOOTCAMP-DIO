@@ -1,5 +1,14 @@
 /* página incial do jogo*/
 
+html {
+    border-width: 10px;
+    border-style: groove;
+    border-color: green greenyellow;
+    height: 100%;
+}
+
 body {
     background-image: url("../imagens/fundo-tela-inicial.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
