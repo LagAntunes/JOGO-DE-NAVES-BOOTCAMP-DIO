@@ -1,7 +1,7 @@
 /* página incial do jogo*/
 
 html {
-    border-width: 5px;
+    border-width: 4px;
     border-style: groove;
     border-color: green greenyellow;
     height: 100%;
@@ -42,5 +42,23 @@ h2 {
     color: rgb(89, 158, 89);
     text-shadow: 1px 1px rgb(156, 209, 156);
     margin-left: 15%;
+}
 
+button {
+    font-family:"Capture\ it";
+    font-size: 1.5em;
+    width: 30%;
+    padding: 0.5%;
+    margin-left: 35%;
+    margin-top: 5%;
+    border-radius: 15px;
+    color: yellowgreen;
+    border-color: green;
+    background-color: transparent;
+}
+
+button:hover {
+    border-color: yellowgreen;
+    color: green;
+    cursor: pointer;
 }
