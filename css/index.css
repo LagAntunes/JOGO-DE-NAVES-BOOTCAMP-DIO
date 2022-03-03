@@ -58,17 +58,8 @@ button {
     color: yellowgreen;
 }
 
-button a {
-    text-decoration: none;
-    color: yellowgreen;
-    width: 100%;
-}
-
 button:hover {
+    color: green;
     border-color: yellowgreen;
     cursor: pointer;
-}
-
-button:hover .botao-inicial {
-    color: green;
 }
