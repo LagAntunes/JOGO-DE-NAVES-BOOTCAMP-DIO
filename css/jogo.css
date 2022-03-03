@@ -25,3 +25,71 @@ body {
     background-image: url("../imagens/fundo_game.jpg");
     border: 3px solid snow;
 }
+
+@font-face {
+    font-family: "ANODETONOONE";
+    src: url("../fontes/ANODETONOONE.TTF");
+}
+
+.instrucoes {
+    width: 70%;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    padding: 2%;
+    background-color: white;
+    border: 5px solid burlywood;
+}
+
+.instrucoes h2 {
+    font-family: "ANODETONOONE";
+    margin-bottom: 5%;
+    color: yellowgreen;
+    text-shadow: 1px 1px green;
+    font-size: 2.5em;
+}
+
+.instrucoes h3 {
+    font-family: "ANODETONOONE";
+    margin-bottom: 5%;
+    color: yellowgreen;
+    text-shadow: 1px 1px green;
+    font-size: 1.5em;
+}
+
+.instrucoes p {
+    margin-bottom: 2%;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.span-cor {
+    color: lightseagreen;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family:"Capture\ it";
+    src: url("../fontes/Capture\ it.ttf");
+}
+
+.instrucoes button {
+    width: 50%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 1%;
+    font-family:"Capture\ it";
+    font-size: 1.5em;
+    border-color: green;
+    background-color: transparent;
+    color: yellowgreen;
+}
+
+.instrucoes button:hover {
+    color: green;
+    border-color: yellowgreen;
+    cursor: pointer;
+}
