@@ -14,3 +14,17 @@
         $(fundoGame).append(`<div id="inimigo1" class="animacaoInimigo1"></div>`);
         $(fundoGame).append(`<div id="inimigo2" class="animacaoInimigo2"></div>`);
     })
+
+/* movimenta o background do jogo */
+    let jogo = {};
+    /* função loop do background */
+    jogo.timer = setInterval(loop, 30);
+    function loop() {
+        moveFundo()
+    }
+
+    /* função que movimenta o background */
+    function moveFundo() {
+        movimentacao = parseInt($(`.fundo-game`).css(`background-position`));
+        $(`.fundo-game`).css(`background-position`, movimentacao - 4);
+    }
