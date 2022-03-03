@@ -52,13 +52,23 @@ button {
     margin-left: 35%;
     margin-top: 5%;
     border-radius: 15px;
-    color: yellowgreen;
+    border-width: 5px;
     border-color: green;
     background-color: transparent;
+    color: yellowgreen;
+}
+
+button a {
+    text-decoration: none;
+    color: yellowgreen;
+    width: 100%;
 }
 
 button:hover {
     border-color: yellowgreen;
-    color: green;
     cursor: pointer;
+}
+
+button:hover .botao-inicial {
+    color: green;
 }
