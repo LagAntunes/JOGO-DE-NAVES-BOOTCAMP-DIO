@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url("../imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    background-color: white;
+}
+
+.fundo-game {
+    width: 950px;
+    height: 630px;
+    background-image: url("../imagens/fundo_game.jpg");
+    border: 3px solid snow;
+}
