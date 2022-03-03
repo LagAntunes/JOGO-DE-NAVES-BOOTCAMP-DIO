@@ -5,25 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/jogo.css">
+        <link rel="stylesheet" href="./css/personagens.css">
         <title>Jogo de Naves - Bootcamp da DIO</title>
     </head>
 
     <body>
         <div class="container">
-            <div class="fundo-game">
-                <div class="instrucoes">
+            <div class="fundo-game" id="fundoGame">
+                <div class="instrucoes" id="blocoInstrucoes">
                     <h2>Ola Recruta</h2>
                     <h3>Sua missao sera derrotar os inimigos e salvar nossos aliados</h3>
                     <p>Utilize a tecla <span class="span-cor">W</span> para movimentar seu helicóptero para cima, a tecla <span class="span-cor">S</span> para movimentá-lo para baixo e a tecla <span class="span-cor">D</span> para atirar.</p>
                     <p>Tente não morrer e boa sorte!!!</p>
 
-                    <button>INICIAR MISSAO</button>
+                    <button id="botao-comeca-jogo">INICIAR MISSAO</button>
                 </div>
             </div>
         </div>
         
 
-        <script src="./javascript/jogo.js"></script>
         <script src="./javascript/jQuery.js"></script>
+        <script src="./javascript/jogo.js"></script>
     </body>
 </html>

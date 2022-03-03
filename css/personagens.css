@@ -1,0 +1,37 @@
+/* Personagens do jogo */
+
+#jogador {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 179px;
+    background-image: url("../imagens/apache.png");
+}
+
+#amigo {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+    left: 10px;
+    top: 464px;
+    background-image: url("../imagens/amigo.png");
+}
+
+#inimigo1 {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 689px;
+    top: 253px;
+    background-image: url("../imagens/inimigo1.png");
+}
+
+#inimigo2 {
+    width: 165px;
+    height: 70px;
+    position: absolute;
+    left: 775px;
+    top: 447px;
+    background-image: url("../imagens/inimigo2.png");
+}
