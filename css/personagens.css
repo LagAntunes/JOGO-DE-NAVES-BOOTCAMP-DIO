@@ -9,6 +9,13 @@
     background-image: url("../imagens/apache.png");
 }
 
+#disparo {
+    width: 50px;
+    height: 8px;
+    position: absolute;
+    background-image: url("../imagens/disparo.png");
+}
+
 #amigo {
     width: 44px;
     height: 51px;
