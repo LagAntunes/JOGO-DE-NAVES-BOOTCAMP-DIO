@@ -25,7 +25,7 @@
         moveInimigo1();
         moveInimigo2();
         moveAmigo();
-        colisao();
+        colisaoInimigo1();
     }
 
 /* teclas de comando do jogador */
@@ -145,7 +145,7 @@
     }
 
 /* função da colisão */
-    function colisao() {
+    function colisaoInimigo1() {
         var colisao1 = ($(`#jogador`).collision($(`#inimigo1`)));
 
         if(colisao1.length > 0) {
@@ -175,3 +175,14 @@
             tempoDaExplosao1 = null;
         }
     }
+
+/* variável de identificação de fim de jogo */
+    var fimDeJogo = false;
+
+/* variáveis de identificação de colisão */
+    var colisao2 = ($(`#jogador`).collision($(`#inimigo2`)));
+    var colisao3 = ($(`#disparo`).collision($(`#inimigo1`)));
+    var colisao4 = ($(`#disparo`).collision($(`#inimigo2`)));
+    var colisao5 = ($(`#jogador`).collision($(`#amigo`)));
+    var colisao6 = ($(`#inimigo2`).collision($(`#amigo`)));
+
