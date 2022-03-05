@@ -16,6 +16,20 @@
     background-image: url("../imagens/disparo.png");
 }
 
+#explosao1 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+    background-image: url("../imagens/explosao.png");
+}
+
+#explosao2 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+    background-image: url("../imagens/explosao.png");
+}
+
 #amigo {
     width: 44px;
     height: 51px;
