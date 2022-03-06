@@ -319,6 +319,23 @@ function start() {
         }
     /* fim da função da explosão 2 */
 
+    /* início da função da explosão 3 */
+        function explosao3(amigoX,amigoY) {
+            somPerdido.play();
+            $(fundoGame).append("<div id='explosao3'></div");
+            $("#explosao3").css("top",amigoY);
+            $("#explosao3").css("left",amigoX);
+
+            var tempoDaExplosao3 = window.setInterval(resetaExplosao3, 1000);
+
+            function resetaExplosao3() {
+                $("#explosao3").remove();
+                window.clearInterval(tempoDaExplosao3);
+                tempoDaExplosao3 = null;     
+            }
+        } 
+    /* fim da função da explosão 3 */
+
     /* início da função que reposiciona o inimigo 2 */
         function reposicionaInimigo2() {
             var tempoColisao4 = window.setInterval(reposiciona4, 5000);
