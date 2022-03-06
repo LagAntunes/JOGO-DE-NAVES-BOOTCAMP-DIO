@@ -339,16 +339,31 @@ function start() {
     /* início da função que reposiciona o inimigo 2 */
         function reposicionaInimigo2() {
             var tempoColisao4 = window.setInterval(reposiciona4, 5000);
-
+                
             function reposiciona4() {
                 window.clearInterval(tempoColisao4);
                 tempoColisao4 = null;
-
-                if(fimdejogo == false) {
-                    $(fundoGame).append("<div id=inimigo2 class='animacaoInimigo2'></div>");
+                    
+                if (fimdejogo == false) {
+                    $(fundoGame).append("<div id='inimigo2'></div");
                 }
-            }
+            }	
         }
     /* fim da função que reposiciona o inimigo 2 */
+
+    /* início da função que reposiciona o amigo */
+        function reposicionaAmigo() {
+            var tempoAmigo = window.setInterval(reposiciona6, 6000);
+            
+            function reposiciona6() {
+                window.clearInterval(tempoAmigo);
+                tempoAmigo = null;
+                
+                if (fimdejogo==false) {
+                    $(fundoGame).append("<div id='amigo' class='animacaoAmigo'></div>");
+                } 
+            } 
+        }
+    /* fim da função que reposiciona o amigo */
 }
 /* fim da função start */
