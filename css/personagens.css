@@ -30,6 +30,20 @@
     background-image: url("../imagens/explosao.png");
 }
 
+#explosao3 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+    background-image: url("../imagens/explosao.png");
+}
+
+#explosao4 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+    background-image: url("../imagens/explosao.png");
+}
+
 #amigo {
     width: 44px;
     height: 51px;
@@ -74,6 +88,15 @@
         -moz-animation: play .5s steps(2) infinite;
         -ms-animation: play .5s steps(2) infinite;
         -o-animation: play .5s steps(2) infinite;
+    }
+
+    .animacaoInimigo2 {
+        background-image: url("../imagens/inimigo2.png");
+        animation: play4 .8s steps(3) infinite;
+        -webkit-animation: play4 .8s steps(3) infinite;
+        -moz-animation: play4 .8s steps(3) infinite;
+        -ms-animation: play4 .8s steps(3) infinite;
+        -o-animation: play4 .8s steps(3) infinite;
     }
 
     @keyframes play {
