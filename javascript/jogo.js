@@ -301,26 +301,20 @@ function start() {
     /* fim da função da explosão 1 */
 
     /* início da função da explosão 2 */
-        function explosao2(inimigo1X, inimigo1Y) {
-            if(explosaoAcontecendo2 == true) {
-                explosao4();
-            } else {
-                explosaoAcontecendo2 = true;
-                somExplosao.play();
-
-                $(fundoGame).append("<div id='explosao2'></div>");
-                var divExplosao2 = $("#explosao2");
-                divExplosao2.css("top", inimigo1Y - 10);
-                divExplosao2.css("left", inimigo1X);
-
-                var tempoDaExplosao2 = window.setInterval(removeExplosao, 1000);
-
-                function removeExplosao() {
-                    divExplosao2.remove();
-                    window.clearInterval(tempoDaExplosao2);
-                    tempoDaExplosao2 = null;
-                    explosaoAcontecendo2 = false;
-                }
+        function explosao2(inimigo2X,inimigo2Y) {
+            somExplosao.play();
+            $(fundoGame).append("<div id='explosao2'></div");
+            var divExplosao2 = $("#explosao2");
+            divExplosao2.css("top", inimigo2Y);
+            divExplosao2.css("left", inimigo2X);
+            divExplosao2.animate({width:200, opacity:0}, "slow");
+            
+            var tempoDaExplosao2 = window.setInterval(removeExplosao2, 1000);
+            
+            function removeExplosao2() {
+                tempoDaExplosao2.remove();
+                window.clearInterval(tempoDaExplosao2);
+                tempoDaExplosao2 = null;
             }
         }
     /* fim da função da explosão 2 */
