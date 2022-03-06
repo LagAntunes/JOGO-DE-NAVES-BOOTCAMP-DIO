@@ -407,3 +407,11 @@ function start() {
     /* fim da função Game Over */
 }
 /* fim da função start */
+
+/* início da função restart */
+    function reiniciaJogo() {
+        somGameover.pause();
+        $("#fim").remove();
+        window.location = "../jogo.html"
+    }
+/* fim da função restart */
