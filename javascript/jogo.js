@@ -2,7 +2,7 @@
 var fundoGame = document.getElementById("fundoGame");
 let instrucoes = document.getElementById("blocoInstrucoes");
 let botaoComecaJogo = document.getElementById("botao-comeca-jogo");
-
+var energia2 = document.getElementById("energia2");
 
 /* inicia o jogo com o clique do botão */
 botaoComecaJogo.addEventListener("click", () => {
@@ -12,27 +12,21 @@ botaoComecaJogo.addEventListener("click", () => {
     $(fundoGame).append(`<div id="amigo" class="animacaoAmigo"></div>`);
     $(fundoGame).append(`<div id="inimigo1" class="animacaoInimigo1"></div>`);
     $(fundoGame).append(`<div id="inimigo2"></div>`);
-
     start();
 })
 
 /* início da função start */
 function start() { 
     $(fundoGame).append("<div id='placar'></div>");
-    $(fundoGame).append("<div id='energia2'></div>");
-    $(fundoGame).append("<div id='energia'></div>");
 
     /* Principais variáveis do jogo */
     var jogo = {}
     var fimdejogo = false;
-    var energia2Atual = 5;
     var energiaAtual = 3;
     var pontos = 0;
     var salvos = 0;
     var perdidos = 0;
     var podeAtirar = true;
-    var explosaoAcontecendo = false;
-    var explosaoAcontecendo2 = false;
     var velocidade = 5;
     var posicaoY = parseInt(Math.random() * 334);
     var TECLA = {
@@ -49,15 +43,9 @@ function start() {
     var somGameover = document.getElementById("somGameover");
     var somPerdido = document.getElementById("somPerdido");
     var somResgate = document.getElementById("somResgate");
-    var errorPassou = document.getElementById("errorPassou");
-    var introMusica = document.getElementById("introMusica");
 
-    /* Música em loop */
-    introMusica.pause();
-    musica.addEventListener("ended", function() {
-        musica.currentTime = 0;
-        musica.play();
-    }, false);
+    /* Música em loop */ 
+    musica.addEventListener("ended", function(){ musica.currentTime = 0; musica.play(); }, false);
     musica.play();
 
     /* Verifica se o usuário pressionou alguma tecla */
@@ -81,6 +69,8 @@ function start() {
             moveinimigo2();
             moveamigo();
             colisao();
+            placar();
+            energia();
         }
     /* fim da função loop */
 
@@ -159,6 +149,7 @@ function start() {
             /* início da condição "pode atirar" */
                 if(podeAtirar == true) {
                     podeAtirar = false;
+                    somDisparo.play();
 
                     topo = parseInt($("#jogador").css("top"))
                     posicaoX = parseInt($("#jogador").css("left"))
@@ -365,5 +356,54 @@ function start() {
             } 
         }
     /* fim da função que reposiciona o amigo */
+
+    /* início da function placar */
+        function placar() {
+            $("#placar").html("<h2> Pontos: " + pontos + " Salvos: " + salvos + " Perdidos: " + perdidos + " Energia: " + energiaAtual + "</h2>");
+        }
+    /* fim da function placar */
+
+    /* início da function energia */
+        function energia() {
+            if(energiaAtual == 3) {
+                
+            }
+
+            if(energiaAtual == 2) {
+                
+            }
+        
+            if(energiaAtual == 1) {  
+                
+            }
+        
+            if(energiaAtual == 0) {
+                
+
+                /* chama a function gameOver */
+                gameOver();
+            }
+        }
+    /* fim da function energia */
+
+    /* início da função Game Over */
+        function gameOver() {
+            fimdejogo = true;
+            musica.pause();
+            somGameover.play();
+            
+            window.clearInterval(jogo.timer);
+            jogo.timer = null;
+            
+            $("#jogador").remove();
+            $("#inimigo1").remove();
+            $("#inimigo2").remove();
+            $("#amigo").remove();
+            
+            $("#fundoGame").append("<div id='fim'></div>");
+            
+            $("#fim").html("<h1> Game Over </h1><p>Sua pontuação foi: " + pontos + "</p>" + "<div id='reinicia' onClick=reiniciaJogo()><h3>Jogar Novamente</h3></div>");
+        }
+    /* fim da função Game Over */
 }
 /* fim da função start */

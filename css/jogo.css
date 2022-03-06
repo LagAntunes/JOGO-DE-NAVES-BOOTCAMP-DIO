@@ -93,27 +93,3 @@ body {
     border-color: yellowgreen;
     cursor: pointer;
 }
-
-#placar {
-    width: 700px;
-    height: 50px;
-    position: absolute;
-    left: 5px;
-    top: 570px;
-}
-
-#energia {
-    width: 259px;
-    height: 67px;
-    position: absolute;
-    left: 700px;
-    top: 7px;
-}
-
-#energia2 {
-    width: 259px;
-    height: 67px;
-    position: absolute;
-    left: 700px;
-    top: 7px;
-}

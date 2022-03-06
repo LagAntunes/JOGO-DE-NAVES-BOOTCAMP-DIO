@@ -64,6 +64,25 @@
     background-image: url("../imagens/inimigo2.png");
 }
 
+#placar {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 5px;
+	top: 590px;
+}
+
+#fim {
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+ 	margin-left:auto;
+    margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+}
+
 /* início das animações */
     .animacaoJogador {
         background-image: url("../imagens/apache.png");
