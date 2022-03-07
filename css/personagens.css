@@ -85,14 +85,52 @@
 }
 
 #fim {
-	width:350px;
-	height:200px;
+    font-family: "ANODETONOONE";
+	width: 40%;
+	height: 250px;
+    border: 5px solid burlywood;
 	background-color:#FFF;
  	margin-left:auto;
     margin-right:auto;
- 	margin-top:100px;
+ 	margin-top:15%;
 	text-align:center;
-	padding:10px;
+	padding:2%;
+}
+
+#fim h1 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: yellowgreen;
+    text-shadow: 1px 1px green;
+    font-size: 2.5em;
+}
+
+#fim p {
+    color: green;
+    font-size: 1.2em;
+    margin-bottom: 10%;
+}
+
+@font-face {
+    font-family:"Capture\ it";
+    src: url("../fontes/Capture\ it.ttf");
+}
+
+#fim button {
+    width: 70%;
+    height: 100%;
+    padding: 1%;
+    font-family:"Capture\ it";
+    font-size: 1.7em;
+    border-color: green;
+    background-color: transparent;
+    color: yellowgreen;
+}
+
+#fim button:hover {
+    color: green;
+    border-color: yellowgreen;
+    cursor: pointer;
 }
 
 /* início das animações */
