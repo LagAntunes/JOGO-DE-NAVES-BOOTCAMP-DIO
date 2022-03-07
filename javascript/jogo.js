@@ -358,27 +358,28 @@ function start() {
     /* fim da função que reposiciona o amigo */
 
     /* início da function placar */
+        var energiaAtualvalor = "<span> 3 </span>"
         function placar() {
-            $("#placar").html("<h2> Pontos: " + pontos + " Salvos: " + salvos + " Perdidos: " + perdidos + " Energia: " + energiaAtual + "</h2>");
+            $("#placar").html("<h2>Pontos: " + pontos + "&nbsp" + "&nbsp" + " Salvos: " + salvos + "&nbsp" + "&nbsp" + " Perdidos: " + perdidos + "&nbsp" + "&nbsp" + " Energia: " + energiaAtualvalor + "</h2>");
         }
     /* fim da function placar */
 
     /* início da function energia */
         function energia() {
             if(energiaAtual == 3) {
-                
+                energiaAtualvalor = "<span style='color: rgb(39, 167, 39)'> 3 </span>";
             }
 
             if(energiaAtual == 2) {
-                
+                energiaAtualvalor = "<span style='color: yellow'> 2 </span>";
             }
         
             if(energiaAtual == 1) {  
-                
+                energiaAtualvalor = "<span style='color: red'> 1 </span>";
             }
         
             if(energiaAtual == 0) {
-                
+                $("#placar").css("display", "none");
 
                 /* chama a function gameOver */
                 gameOver();

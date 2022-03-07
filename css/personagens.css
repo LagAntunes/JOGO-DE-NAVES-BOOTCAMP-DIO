@@ -64,12 +64,24 @@
     background-image: url("../imagens/inimigo2.png");
 }
 
+@font-face {
+    font-family: "ANODETONOONE";
+    src: url("../fontes/ANODETONOONE.TTF");
+}
+
 #placar {
-	width: 450px;
-	height: 50px;
+	width: 800px;
+	height: 30px;
+    padding: 1%;
 	position: absolute;
-	left: 5px;
-	top: 590px;
+	left: 3px;
+	top: 571px;
+    font-family: "ANODETONOONE";
+    background-color: white;
+    border: 5px solid green;
+    color: rgb(39, 167, 39);
+    text-shadow: 1px 1px black;
+    display: block;
 }
 
 #fim {
