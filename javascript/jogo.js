@@ -2,7 +2,6 @@
 var fundoGame = document.getElementById("fundoGame");
 let instrucoes = document.getElementById("blocoInstrucoes");
 let botaoComecaJogo = document.getElementById("botao-comeca-jogo");
-var energia2 = document.getElementById("energia2");
 
 /* inicia o jogo com o clique do botão */
 botaoComecaJogo.addEventListener("click", () => {
@@ -221,7 +220,7 @@ function start() {
             /* início da colisão do disparo do jogador com o inimigo 1 */
                 if(colisao3.length > 0) {
                     pontos = pontos + 100;
-                    velocidade = velocidade + 0.2;
+                    velocidade = velocidade + 0.05;
 
                     inimigo1X = parseInt($("#inimigo1").css("left"));
                     inimigo1Y = parseInt($("#inimigo1").css("top"));
@@ -262,13 +261,17 @@ function start() {
 
             /* início da colisão do inimigo 2 com o amigo */
                 if(colisao6.length>0) {
-                    perdidos++;    
+                    perdidos++; 
                     amigoX = parseInt($("#amigo").css("left"));
                     amigoY = parseInt($("#amigo").css("top"));
                     explosao3(amigoX,amigoY);
                     $("#amigo").remove();
                             
-                    reposicionaAmigo();      
+                    reposicionaAmigo();
+                    
+                    $.when(perdidos).then(function( ) {
+                        energiaAtual--;
+                    });
                 }
             /* fim da colisão do inimigo 2 com o amigo */
         }
