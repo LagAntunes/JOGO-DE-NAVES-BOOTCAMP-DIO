@@ -129,6 +129,8 @@ function start() {
 
             if(posicaoX <= 0) {
                 $("#inimigo2").css("left", 100);
+                $("#inimigo2").remove()
+                reposicionaInimigo2()
             }
         }
     /* fim da função que movimenta o inimigo 2 */
